@@ -1,7 +1,9 @@
 package com.example.TherapeuticJournal.api.Emotion;
 
 import com.example.TherapeuticJournal.Repository.CommentRepository;
+import com.example.TherapeuticJournal.Repository.CommentRepository;
 import com.example.TherapeuticJournal.Repository.EmotionRepository;
+import com.example.TherapeuticJournal.api.Emotion.dto.CreateCommentDto;
 import com.example.TherapeuticJournal.api.Emotion.dto.CreateCommentDto;
 import com.example.TherapeuticJournal.api.Emotion.dto.CreateEmotionDto;
 import com.example.TherapeuticJournal.api.Emotion.dto.UpdateEmotionDto;
@@ -22,7 +24,8 @@ public class EmotionController {
     private final EmotionRepository emotionRepository;
     private final CommentRepository commentRepository; // Adaugă repository-ul pentru comentarii
 
-    @Autowired
+
+       @Autowired
     public EmotionController(EmotionRepository emotionRepository, CommentRepository commentRepository) {
         this.emotionRepository = emotionRepository;
         this.commentRepository = commentRepository; // Initializează repository-ul pentru comentarii
@@ -108,6 +111,5 @@ public class EmotionController {
     public List<Comment> getCommentsByEmotionId(@PathVariable Integer emotionId) {
         return commentRepository.findCommentsByEmotionId(emotionId);
     }
-
 
 }

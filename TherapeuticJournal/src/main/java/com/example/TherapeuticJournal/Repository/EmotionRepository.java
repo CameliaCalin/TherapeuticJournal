@@ -14,7 +14,7 @@ public interface EmotionRepository extends JpaRepository<Emotion, Integer> {
             "AND (:description IS NULL OR e.description = :description)")
     List<Emotion> findByCriteria(String name, Integer intensity, String description);
 
-    // Metoda pentru a obține toate comentariile unei emoții după id-ul emoției
+
 
 }
 

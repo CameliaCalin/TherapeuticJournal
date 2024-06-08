@@ -15,8 +15,8 @@ public class Emotion {
      String intensity; // intensity level
      String description; // description
 
-    @OneToMany(mappedBy = "emotion", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Comment> comments;
+   /* @OneToMany(mappedBy = "emotion", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Comment> comments;*/
 
     // Getters and Setters
 
@@ -52,11 +52,11 @@ public class Emotion {
         this.description = description;
     }
 
-    public List<Comment> getComments() {
+  /*  public List<Comment> getComments() {
         return comments;
     }
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
-    }
+    }*/
 }
