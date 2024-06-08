@@ -2,6 +2,8 @@ package com.example.TherapeuticJournal.domain.Emotion;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "emotion", schema = "public")
 public class Emotion {
@@ -12,6 +14,9 @@ public class Emotion {
      String name;
      String intensity; // intensity level
      String description; // description
+
+    @OneToMany(mappedBy = "emotion", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Comment> comments;
 
     // Getters and Setters
 
@@ -45,5 +50,13 @@ public class Emotion {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 }

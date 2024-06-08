@@ -9,21 +9,21 @@ public class Activity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id; // Changed from int to Integer
+    private int id;
     private String name;
     private String description;
-    private Integer duration; // Changed from int to Integer
+    private int duration;
 
     @OneToMany(mappedBy = "activity", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Task> tasks;
 
     // Getters and Setters
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
