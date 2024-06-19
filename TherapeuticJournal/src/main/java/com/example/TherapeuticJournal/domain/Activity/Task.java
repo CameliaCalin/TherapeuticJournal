@@ -12,9 +12,6 @@ public class Task {
     private String name;
     private String description;
 
-    @ManyToOne
-    @JoinColumn(name = "activity_id")
-    private Activity activity;
 
     // Getters and Setters
     public int getId() {
@@ -41,11 +38,4 @@ public class Task {
         this.description = description;
     }
 
-    public Activity getActivity() {
-        return activity;
-    }
-
-    public void setActivity(Activity activity) {
-        this.activity = activity;
-    }
 }

@@ -1,13 +1,18 @@
-package com.example.TherapeuticJournal.api.Activity.dto;
+package com.example.TherapeuticJournal.api.Task.dto;
 
-public class CreateActivityDto {
-    int id;
-    String name;
-    String description;
-    int duration;
+public class ReadTaskDto {
+    private int id;
+    private String name;
+    private String description;
+
+    // Constructor
+    public ReadTaskDto(int id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
 
     // Getters and Setters
-
     public int getId() {
         return id;
     }
@@ -30,13 +35,5 @@ public class CreateActivityDto {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
-
-    public void setDuration(int duration) {
-        this.duration = duration;
     }
 }
