@@ -1,9 +1,14 @@
-package com.example.TherapeuticJournal.api.Activity.dto;
+package com.example.TherapeuticJournal.api.Task.dto;
 
-public class UpdateActivityDto {
-    String name;
-    String description;
-    int duration;
+public class CreateTaskDto {
+    private String name;
+    private String description;
+
+    // Constructor
+    public CreateTaskDto(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
 
     // Getters and Setters
 
@@ -21,13 +26,5 @@ public class UpdateActivityDto {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
-
-    public void setDuration(int duration) {
-        this.duration = duration;
     }
 }
